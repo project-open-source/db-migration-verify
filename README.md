@@ -10,10 +10,9 @@
   - Visit `http://[your_host_name]:8080/actuator/health` to ensure application health status
     - You can modify configuration in  `application.yml` If you want to custom the default server port
 - **Frontend**
-
   - Using `npm install` command to install relevant dependencies
   - Using `npm run dev` to compile and hot-reload for development
-    - Visit `http://[your_host_name]:3000` to access index page
+    - Visit `http://[your_host_name]:5173` to access index page
   - Using `npm run build` to complie & build for production package
 
 ## 🌈 Feature Introduction
@@ -24,9 +23,17 @@ Using this tool, you can gain insight into all the difference system variables a
 
 We can use API or Web UI to process database variables compare. It will return the different global variable fields between two databases in JSON format.
 
-If you want to using by API, please request with the below format:
+---
+
+If you want to use by Web UI directly, please execute `npm install && npm run dev` under the `db-diff-frontend` directory. 
+
+And then visit `http://[your_host_name]:5173` to access index page like the below screenshoot.
+
+![db-variable-compare-web-page](https://zchengb-images.oss-cn-shenzhen.aliyuncs.com/image-20221221154045561.png)
 
 ---
+
+If you want to use by API, please request with the below format:
 
 **Request Url:**
 

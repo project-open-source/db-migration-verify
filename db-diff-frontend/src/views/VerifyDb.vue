@@ -2,7 +2,7 @@
     <div class="tool-wrapper">
         <h1 @click="this.toggleForm">Db-Diff-Tools</h1>
         <el-form ref="form" :model="request" label-width="80px" v-if="showForm">
-            <el-form-item label="requestBody">
+            <el-form-item label="请求参数">
                 <el-input type="textarea" v-model="request.requestBody" height="200px"></el-input>
             </el-form-item>
             <el-form-item>
