@@ -46,11 +46,11 @@ And then visit `http://[your_host_name]:5173` to access index page like the belo
 
 ![db-variable-compare-web-page](https://zchengb-images.oss-cn-shenzhen.aliyuncs.com/image-20221221154045561.png)
 
-The database variable compare result is distinguish with two difference color about `orange` & `green`.
+The database variable compare result is distinguished with two different colours : `orange` & `green`.
 
-The `GREEN` rows means we have confirmed and no disagreement about it.
+The `GREEN` rows mean we have confirmed and have no disagreement about it.
 
-The `ORANGE` rows means we have not confirmed yet and it may occur issue that you should pay attention about it.
+The `ORANGE` rows mean we have not confirmed yet, and it may be issue that you should pay attention to.
 
 So if you have database variable fields already confirmed and want to make it into `GREEN` rows, please configure relevant field names into `application.yml` with the specific path `db-verify.target-confirmed-variables`
 
