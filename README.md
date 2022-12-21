@@ -2,18 +2,33 @@
 
 >Last update time: 21/12/2022
 
-## 🥏 Setup
+## 🥏 Local Setup
 
 - **Backend**
-  - Start SpringBoot application class[`DbMigrationApplication.java`] directly 
   
+  - Start SpringBoot application class[`DbMigrationApplication.java`] directly 
   - Visit `http://[your_host_name]:8080/actuator/health` to ensure application health status
     - You can modify configuration in  `application.yml` If you want to custom the default server port
 - **Frontend**
+  - Using `cd db-diff-frontend` command into `db-diff-frontend` directory
   - Using `npm install` command to install relevant dependencies
   - Using `npm run dev` to compile and hot-reload for development
     - Visit `http://[your_host_name]:5173` to access index page
   - Using `npm run build` to complie & build for production package
+  
+
+## 🛠️ Build Runnable Jar Package
+
+If you want to deploy this project into your server instance, please execution the below commands to build a jar package.
+
+```shell
+$ cd db-diff-frontend
+// npm run build will generate relevant static page resource into the src/main/resource directory
+$ npm run build
+$ cd ..
+// bootJar will generate final jar package into ./build/libs directory
+$ ./gradlew build bootJars
+```
 
 ## 🌈 Feature Introduction
 
@@ -30,6 +45,14 @@ If you want to use by Web UI directly, please execute `npm install && npm run de
 And then visit `http://[your_host_name]:5173` to access index page like the below screenshoot.
 
 ![db-variable-compare-web-page](https://zchengb-images.oss-cn-shenzhen.aliyuncs.com/image-20221221154045561.png)
+
+The database variable compare result is distinguish with two difference color about `orange` & `green`.
+
+The `GREEN` rows means we have confirmed and no disagreement about it.
+
+The `ORANGE` rows means we have not confirmed yet and it may occur issue that you should pay attention about it.
+
+So if you have database variable fields already confirmed and want to make it into `GREEN` rows, please configure relevant field names into `application.yml` with the specific path `db-verify.target-confirmed-variables`
 
 ---
 
