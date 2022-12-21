@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "You are push code to $url"
+echo "First we run build to assure your code is right. If you want to skip it, please run git push with --no-verify."
+./gradlew clean build
+RESULT=$?
+exit $RESULT

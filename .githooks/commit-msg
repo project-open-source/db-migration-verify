@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+
+COMMIT_MSG_MAX_LENGTH = 141
+COMMIT_FORMAT_POLICY_TAG = "[COMMIT_FORMAT_POLICY] ERROR::"
+COMMIT_ERROR_BANNER = "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+$COMMIT_FORMAT_REGEX = /^\[[A-z0-9\s&]+\] #(((BP|HUAW|TPC|BP3)-\d+)|(N\/A)) (chore|docs|feat|fix|refactor|style|test)\: .+$/
+
+message_file = ARGV[0]
+message = File.read(message_file)
+
+if message.include? "This reverts commit"
+  exit 0
+end
+
+if message.include? "It looks like you may be committing a cherry-pick"
+  exit 0
+end
+
+if message.start_with? "Merge branch"
+  exit 0
+end
+
+if message.length > COMMIT_MSG_MAX_LENGTH
+  puts COMMIT_ERROR_BANNER
+  puts "#{COMMIT_FORMAT_POLICY_TAG} Commit message length #{message.length} exceeds the maximum allowed length: #{COMMIT_MSG_MAX_LENGTH}."
+  puts COMMIT_ERROR_BANNER
+  exit 1
+end
+
+if !$COMMIT_FORMAT_REGEX.match(message)
+  puts COMMIT_ERROR_BANNER
+  puts "#{COMMIT_FORMAT_POLICY_TAG} Commit message format invalid. Please follow the format as follows:"
+  puts "[Contributor name] #jira_issue_code chore|docs|feat|fix|refactor|style|test: your_commit_message."
+  puts "E.g."
+  puts "[XXXX] #STORY-1 fix: XXXXXXXXXXXXXXX."
+  puts "Or:"
+  puts "[XXXX] #N/A fix: XXXXXXXXXXXXX."
+  puts "Verb list:"
+  puts "  feat     - new feature for the USER, not a new feature for build script"
+  puts "  fix      - bug fix for the USER, not a fix to a build script"
+  puts "  refactor - refactoring production code e.g. renaming a variable"
+  puts "  test     - adding missing tests, refactoring tests, no production code change"
+  puts "  chore    - updating gradle version etc., no production code change"
+  puts "  style    - CODE style (not front-end style), code formatting, missing semicolon etc.,"
+  puts "             no production code change"
+  puts "  docs     - changes to the documentation, comment etc."
+  puts "Reference: https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716"
+  puts COMMIT_ERROR_BANNER
+  exit 1
+end
+

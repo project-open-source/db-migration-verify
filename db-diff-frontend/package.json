@@ -1,0 +1,27 @@
+{
+  "name": "db-diff-frontend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build-with-base": "vite build --base=/ftms-db-migration-verify/",
+    "preview": "vite preview",
+    "lint": "eslint  --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "element-plus": "^2.2.26",
+    "vue": "^3.2.11",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^8.29.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "prettier": "^2.8.1",
+    "vite": "^4.0.0"
+  }
+}

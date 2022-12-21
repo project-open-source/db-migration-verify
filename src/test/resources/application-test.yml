@@ -1,0 +1,8 @@
+db-verify:
+  custom-db-enable: true
+  host: mysql-service
+  port: 3306
+  source-database: source-database
+  target-database: target-database
+  username: root
+  password: root
