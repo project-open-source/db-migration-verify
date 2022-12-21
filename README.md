@@ -1,13 +1,12 @@
-# db-migration-verify
+# <div align="center">db-migration-verify</div>
 
 >Last update time: 21/12/2022
 
-## a. Setup
+## 🥏 Setup
 
 - **Backend**
-
   - Start SpringBoot application class[`DbMigrationApplication.java`] directly 
-
+  
   - Visit `http://[your_host_name]:8080/actuator/health` to ensure application health status
     - You can modify configuration in  `application.yml` If you want to custom the default server port
 - **Frontend**
@@ -17,7 +16,7 @@
     - Visit `http://[your_host_name]:3000` to access index page
   - Using `npm run build` to complie & build for production package
 
-## b. Feature Introduction
+## 🌈 Feature Introduction
 
 Using this tool, you can gain insight into all the difference system variables and schema fields in two databases. Currently, we only support MySQL database.
 
@@ -139,7 +138,7 @@ It will compare the below points between two difference database.
 
 ![image-20221221145819708](https://zchengb-images.oss-cn-shenzhen.aliyuncs.com/image-20221221145819708.png)
 
-## c. Contributor
+## 🫐 Contributor
 
 - Thoughtworks - Shuai Shao
 - Thoughtworks - Xupeng Ma
