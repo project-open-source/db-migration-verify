@@ -1,4 +1,4 @@
-package com.ftms.db.migration.verify.utils;
+package com.thoughtworks.db.migration.verify.utils;
 
 import com.opencsv.CSVReaderBuilder;
 import lombok.AllArgsConstructor;

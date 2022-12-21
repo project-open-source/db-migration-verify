@@ -1,6 +1,6 @@
-package com.ftms.db.migration.verify.controller;
+package com.thoughtworks.db.migration.verify.controller;
 
-import com.ftms.db.migration.verify.AbstractBaseTest;
+import com.thoughtworks.db.migration.verify.AbstractBaseTest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.parsing.Parser;

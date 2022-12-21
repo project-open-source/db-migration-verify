@@ -1,13 +1,12 @@
-package com.ftms.db.migration.verify.service;
+package com.thoughtworks.db.migration.verify.service;
 
-import com.ftms.db.migration.verify.AbstractBaseTest;
-import com.ftms.db.migration.verify.TableBuilder;
+import com.thoughtworks.db.migration.verify.AbstractBaseTest;
+import com.thoughtworks.db.migration.verify.TableBuilder;
 import com.thoughtworks.db.migration.verify.controller.request.VerifyDatabaseRequest;
 import com.thoughtworks.db.migration.verify.model.ColumnInfo;
 import com.thoughtworks.db.migration.verify.model.TableInfo;
-import com.ftms.db.migration.verify.model.TableInfoBuilder;
+import com.thoughtworks.db.migration.verify.model.TableInfoBuilder;
 import com.thoughtworks.db.migration.verify.model.TableValidationResult;
-import com.thoughtworks.db.migration.verify.service.TableVerifyService;
 import com.thoughtworks.db.migration.verify.utils.CsvReportFactory;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,7 +18,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
-import static com.ftms.db.migration.verify.utils.CsvReportHelper.readReportContent;
+import static com.thoughtworks.db.migration.verify.utils.CsvReportHelper.readReportContent;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)

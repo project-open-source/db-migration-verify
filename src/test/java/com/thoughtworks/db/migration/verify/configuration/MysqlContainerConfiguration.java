@@ -1,4 +1,4 @@
-package com.ftms.db.migration.verify.configuration;
+package com.thoughtworks.db.migration.verify.configuration;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;

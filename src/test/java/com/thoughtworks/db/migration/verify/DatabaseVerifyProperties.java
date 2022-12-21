@@ -1,4 +1,4 @@
-package com.ftms.db.migration.verify;
+package com.thoughtworks.db.migration.verify;
 
 import lombok.Getter;
 import lombok.Setter;

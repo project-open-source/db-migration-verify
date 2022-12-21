@@ -1,11 +1,10 @@
-package com.ftms.db.migration.verify.service;
+package com.thoughtworks.db.migration.verify.service;
 
 import com.thoughtworks.db.migration.verify.configuration.DataSourceProperties;
 import com.thoughtworks.db.migration.verify.controller.request.DatasourceRequest;
 import com.thoughtworks.db.migration.verify.controller.request.VerifyDatabaseRequest;
 import com.thoughtworks.db.migration.verify.model.DatabaseManager;
 import com.thoughtworks.db.migration.verify.model.DatabaseVariable;
-import com.thoughtworks.db.migration.verify.service.DatabaseVerifyService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

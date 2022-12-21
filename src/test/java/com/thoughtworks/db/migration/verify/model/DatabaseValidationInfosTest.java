@@ -1,7 +1,6 @@
-package com.ftms.db.migration.verify.model;
+package com.thoughtworks.db.migration.verify.model;
 
-import com.ftms.db.migration.verify.AbstractBaseTest;
-import com.thoughtworks.db.migration.verify.model.DatabaseValidationInfos;
+import com.thoughtworks.db.migration.verify.AbstractBaseTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

@@ -1,7 +1,5 @@
-package com.ftms.db.migration.verify.model;
+package com.thoughtworks.db.migration.verify.model;
 
-import com.thoughtworks.db.migration.verify.model.ColumnInfo;
-import com.thoughtworks.db.migration.verify.model.TableInfo;
 import lombok.Setter;
 
 import java.util.List;

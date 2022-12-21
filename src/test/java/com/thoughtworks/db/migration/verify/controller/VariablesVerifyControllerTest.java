@@ -1,4 +1,4 @@
-package com.ftms.db.migration.verify.controller;
+package com.thoughtworks.db.migration.verify.controller;
 
 import com.thoughtworks.db.migration.verify.controller.request.VerifyDatabaseRequest;
 import org.junit.jupiter.api.Test;

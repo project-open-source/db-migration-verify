@@ -1,7 +1,6 @@
-package com.ftms.db.migration.verify.utils;
+package com.thoughtworks.db.migration.verify.utils;
 
-import com.ftms.db.migration.verify.AbstractBaseTest;
-import com.thoughtworks.db.migration.verify.utils.DatabaseConnectionFactory;
+import com.thoughtworks.db.migration.verify.AbstractBaseTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;

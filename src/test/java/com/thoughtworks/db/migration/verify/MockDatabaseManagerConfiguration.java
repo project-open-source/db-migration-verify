@@ -1,4 +1,4 @@
-package com.ftms.db.migration.verify;
+package com.thoughtworks.db.migration.verify;
 
 import com.thoughtworks.db.migration.verify.model.DatabaseManager;
 import org.mockito.Mockito;

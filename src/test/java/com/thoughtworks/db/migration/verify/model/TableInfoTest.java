@@ -1,8 +1,5 @@
-package com.ftms.db.migration.verify.model;
+package com.thoughtworks.db.migration.verify.model;
 
-import com.thoughtworks.db.migration.verify.model.ColumnInfo;
-import com.thoughtworks.db.migration.verify.model.ErrorMessages;
-import com.thoughtworks.db.migration.verify.model.TableInfo;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
