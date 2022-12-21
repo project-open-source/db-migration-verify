@@ -10,9 +10,9 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
         DataSourceAutoConfiguration.class,
         DataSourceTransactionManagerAutoConfiguration.class,
         HibernateJpaAutoConfiguration.class} )
-public class DbMigrationSpringBootApplication {
+public class DbMigrationApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DbMigrationSpringBootApplication.class, args);
+        SpringApplication.run(DbMigrationApplication.class, args);
     }
 }
